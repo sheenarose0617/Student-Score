@@ -1,33 +1,30 @@
-String evaluateScore(int score) {
-  if (score < 0 || score > 100) {
-    return 'Invalid score. Enter a score from 0 to 100.';
-  }
-
+String checkScore(int score) {
   String result;
 
-  if (score >= 75) {
-    result = 'PASSED';
+  if (score >= 75 && score <= 100) {
+    result = "PASSED";
+  } else if (score >= 0 && score < 75) {
+    result = "FAILED";
   } else {
-    result = 'FAILED';
+    result = "INVALID SCORE";
   }
 
   for (int i = 1; i <= 3; i++) {
-    print('$i. Your score is $score - $result.');
+    print("$i. Score: $score - $result");
   }
 
   return result;
 }
 
 void main() {
-  print('===== Student Score Checker =====');
+  try {
+    String input = "0";
+    int score = int.parse(input);
 
-  int score = 85;
+    String result = checkScore(score);
 
-  String result = evaluateScore(score);
-
-  if (result.startsWith('Invalid score')) {
-    print(result);
-  } else {
-    print('Final result: $result');
+    print("Final Result: $result");
+  } catch (e) {
+    print("Error: Please enter a valid whole number.");
   }
 }
