@@ -1,0 +1,33 @@
+String evaluateScore(int score) {
+  if (score < 0 || score > 100) {
+    return 'Invalid score. Enter a score from 0 to 100.';
+  }
+
+  String result;
+
+  if (score >= 75) {
+    result = 'PASSED';
+  } else {
+    result = 'FAILED';
+  }
+
+  for (int i = 1; i <= 3; i++) {
+    print('$i. Your score is $score - $result.');
+  }
+
+  return result;
+}
+
+void main() {
+  print('===== Student Score Checker =====');
+
+  int score = 85;
+
+  String result = evaluateScore(score);
+
+  if (result.startsWith('Invalid score')) {
+    print(result);
+  } else {
+    print('Final result: $result');
+  }
+}
