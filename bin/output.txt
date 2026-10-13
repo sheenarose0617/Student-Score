@@ -1,5 +1,4 @@
-===== Student Score Checker =====
-1. Your score is 85 - PASSED.
-2. Your score is 85 - PASSED.
-3. Your score is 85 - PASSED.
-Final result: PASSED
+1. Score: 85 - PASSED
+2. Score: 85 - PASSED
+3. Score: 85 - PASSED
+Final Result: PASSED
